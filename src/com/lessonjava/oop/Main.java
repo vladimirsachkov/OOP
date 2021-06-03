@@ -1,8 +1,24 @@
 package com.lessonjava.oop;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        Dog lab = new Dog();
+        lab.setPaws(5);
+        lab.setTail(2);
+        lab.setName("Charley");
+        lab.setBreed("Lab");
+
+        Dog sheppard = new Dog();
+        sheppard.setPaws(4);
+        sheppard.setTail(1);
+        sheppard.setName("Mike");
+        sheppard.setBreed("Sheppard");
+
+        System.out.println("Lab's name is "+lab.getName());
+        System.out.println("Sheppard's name is" +sheppard.getName());
+        System.out.println("Lab has "+lab.getPaws()+" paws");
     }
 }
