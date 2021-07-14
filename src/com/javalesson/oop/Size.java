@@ -6,7 +6,8 @@ public enum Size {
     SMALL("S"),
     AVERAGE("M"),
     BIG("L"),
-    VERY_BIG("XL");
+    VERY_BIG("XL"),
+    UNDEFINED("");
 
     Size (String abbreviation) {
         this.abbreviation = abbreviation;

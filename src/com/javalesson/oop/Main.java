@@ -25,5 +25,14 @@ public class Main {
         doberman.setBreed("Doberman");
         doberman.setSize(com.javalesson.oop.Size.BIG);
         sheppard.bite();
+
+        Size s = Size.SMALL;
+        Size s1 = Size.valueOf("BIG");
+//        System.out.println(s1);
+
+        Size[] values = Size.values();
+        for (int i=0; i< values.length; i++) {
+            System.out.println(values[i]);
+        }
     }
 }
