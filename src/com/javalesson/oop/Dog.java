@@ -1,7 +1,5 @@
 package com.javalesson.oop;
 
-import javax.xml.bind.annotation.XmlType;
-
 public class Dog {
 
     private static int dogsCount;
