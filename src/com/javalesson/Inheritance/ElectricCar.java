@@ -30,4 +30,24 @@ public class ElectricCar extends Auto {
     public void setPassengersNumber(int passengersNumber) {
         this.passengersNumber = passengersNumber;
     }
+
+    @Override
+    public void energize() {
+        Auto.doSmth();
+        charge();
+    }
+
+    @Override
+    public void start() {
+        isRunning = true;
+        setCurrentSpeed(10);
+        System.out.println("Car is starting");
+    }
+
+    @Override
+    public void stop() {
+        isRunning = false;
+        setCurrentSpeed(10);
+        System.out.println("Car has stopped");
+    }
 }

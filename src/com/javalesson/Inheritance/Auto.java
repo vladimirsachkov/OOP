@@ -1,6 +1,6 @@
 package com.javalesson.Inheritance;
 
-public class Auto {
+public abstract class Auto {
 
     private String producer;
     private String model;
@@ -8,12 +8,19 @@ public class Auto {
     private int currentSpeed;
     protected boolean isRunning;
 
+    public Auto() {
+    }
+
     public Auto(String producer, String model, Engine engine) {
         this.producer = producer;
         this.model = model;
         this.engine = engine;
         System.out.println("Auto was initialized");
     }
+
+    public abstract void energize();
+
+    public static void doSmth(){};
 
     public void start() {
         isRunning = true;
@@ -50,6 +57,10 @@ public class Auto {
 
     public Engine getEngine() {
         return engine;
+    }
+
+    public void setCurrentSpeed(int currentSpeed) {
+        this.currentSpeed = currentSpeed;
     }
 
     @Override

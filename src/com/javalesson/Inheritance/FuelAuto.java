@@ -2,7 +2,7 @@ package com.javalesson.Inheritance;
 
 import java.io.IOException;
 
-public class FuelAuto extends Auto {
+public abstract class FuelAuto extends Auto {
 
     private int availablePetrol;
     private int tankVolume;
