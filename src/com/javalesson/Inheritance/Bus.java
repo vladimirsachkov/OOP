@@ -1,15 +1,16 @@
 package com.javalesson.Inheritance;
 
+import java.io.FileNotFoundException;
+
 public class Bus extends FuelAuto {
 
     int passengerNumber;
 
-    public Bus(String producer, String model, EngineType engineType, int availablePetrol, int tankVolume, int passengerNumber) {
-        super(producer, model, engineType, availablePetrol, tankVolume);
+    public Bus(String producer, String model, Engine engine, int availablePetrol, int tankVolume, int passengerNumber) {
+        super(producer, model, engine, availablePetrol, tankVolume);
         this.passengerNumber = passengerNumber;
         System.out.println("Bus was initialized");
     }
-
 
     public void fuelUp() {
         int volume = getTankVolume() - getAvailablePetrol();
@@ -17,11 +18,12 @@ public class Bus extends FuelAuto {
     }
 
     @Override
-    public Integer fuelUp(int petrolVolume) {
+    public void fuelUp(int petrolVolume) {
         int volume = getAvailablePetrol() + petrolVolume;
         if (volume>getTankVolume()) {
             setAvailablePetrol(getTankVolume());
         }
+        System.out.println("Adding DIESEL");
     }
 
     public int getPassengerNumber() {

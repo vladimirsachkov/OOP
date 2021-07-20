@@ -5,8 +5,8 @@ public class ElectricCar extends Auto {
     private int batteryVolume;
     private int passengersNumber;
 
-    public ElectricCar(String producer, String model, EngineType engineType, int batteryVolume, int passengersNumber) {
-        super(producer, model, EngineType.ELECTRIC);
+    public ElectricCar(String producer, String model, int batteryVolume, int passengersNumber) {
+        super(producer, model, new Engine());
         this.batteryVolume = batteryVolume;
         this.passengersNumber = passengersNumber;
     }
