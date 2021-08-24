@@ -4,6 +4,7 @@ public class Display {
 
     private static final int DISPLAY_HEIGHT = 1920;
     private static final int DISPLAY_WIDTH = 1280;
+    private int x = 0;
 
     public Display() {
         Pixel pixel = new Pixel(10,10, Color.BLUE);
@@ -24,6 +25,7 @@ public class Display {
                 throw new IllegalArgumentException("Coordinates x and y should be between 0-"+DISPLAY_WIDTH + " and 0-" + DISPLAY_HEIGHT);
             }
         }
+
     }
 
     public enum Color {
